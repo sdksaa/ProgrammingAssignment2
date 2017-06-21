@@ -33,3 +33,9 @@ cacheSolve <- function(x, ...) {
 	x$setInv(m) ## set to object
 	m ## return solve
 }
+
+## Test
+
+  test <- matrix(runif(9,1,100),3,3) ## test matrix
+  testCached <- makeCacheMatrix(test)
+  testInv <- cacheSolve(testCached)
