@@ -1,8 +1,10 @@
 ## The function creates a list containing the 4 sub functions:
-## set, get, setInv and getINv.
-
-
-## Write a short comment describing this function
+## set, get, setInv and getINv. These functions will return the inverse of a matrix. 
+## If the inverse of the matrix has been previously calculated, it will be cached 
+## and we can extract the cached result instead of calculate it again. 
+ 
+## makeCacheMatrix offers a list of functions that will be used in cacheSolve. 
+## The original matrix and its inverse can be saved in the list. 
 
 makeCacheMatrix <- function(x = matrix()) {
 	xinv <- NULL ## store of result
@@ -20,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve will cache the inverse of the matrix
 
 cacheSolve <- function(x, ...) {
 	m <- x$getInv() ## get inverse matrix from x
